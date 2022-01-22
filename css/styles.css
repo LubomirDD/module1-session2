@@ -7,13 +7,84 @@
   --accent-color: #ff6c00;
 }
 
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+}
+img {
+  display: block;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+button {
+  cursor: pointer;
+}
+
 body {
   font-family: "Open Sans", sans-serif;
 }
 
+.container {
+  width: 1200px;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin: 0 auto;
+  outline: 2px solid red;
+}
+
+.visually-hidden {
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  margin: -1px;
+}
+
 /* ----------------------HEADER */
 .header {
-  background-color: gray;
+  background-color: plum;
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 1.33;
+  letter-spacing: 0.1em;
+  padding-top: 32px;
+  padding-bottom: 32px;
+}
+
+.logo {
+  margin-right: 64px;
+}
+
+.header-item + .header-item {
+  margin-left: 40px;
+}
+
+.header-container {
+  display: flex;
+  align-items: center;
+}
+
+.header-list {
+  display: flex;
+}
+
+.navigation {
+  display: flex;
+  align-items: center;
 }
 
 .header-link {
@@ -27,6 +98,10 @@ body {
 .header-link:hover,
 .header-link:focus {
   color: var(--accent-color);
+}
+
+.header-contacts {
+  margin-left: auto;
 }
 
 .header-link-tel {
@@ -45,11 +120,16 @@ body {
   letter-spacing: 0.09em;
   text-transform: uppercase;
   color: var(--first-btn-color);
+  margin-left: 60px;
+  border: 1px solid #ff6c00;
+  border-radius: 25px;
+  background-color: transparent;
+  min-width: 160px;
 }
 
 .header-btn:hover,
 .header-btn:focus {
-  color: var(--first-btn-color);
+  color: var(--accent-color);
 }
 
 /* ----------------------HERO */
@@ -69,6 +149,259 @@ body {
 .hero-link:hover,
 .hero-link:focus {
   color: var(--accent-color);
+}
+
+.hero-right {
+  background-color: brown;
+}
+
+.hero-pre-title {
+  font-weight: 600;
+  font-size: 11px;
+  line-height: 1.36;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+  color: rgba(157, 164, 189, 0.6);
+}
+
+.hero-title {
+  font-family: "Raleway", sans-serif;
+  font-weight: bold;
+  font-size: 72px;
+  line-height: calc(85 / 72);
+  letter-spacing: 0.05em;
+  margin-bottom: 20px;
+  color: #ffffff;
+}
+
+.hero-sub-title {
+  font-size: 18px;
+  line-height: 1.67;
+  letter-spacing: 0.02em;
+  color: #9da4bd;
+}
+
+/* ----------------------ABOUT */
+
+.about {
+  padding-top: 139px;
+  padding-bottom: 121px;
+}
+
+.about-pre-title {
+  font-weight: 600;
+  font-size: 11px;
+  line-height: 1.36;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+  color: #303030;
+}
+
+.about-title {
+  font-family: "Raleway", sans-serif;
+  font-weight: bold;
+  font-size: 42px;
+  line-height: calc(49 / 42);
+  letter-spacing: 0.05em;
+  margin-bottom: 20px;
+  color: #303030;
+}
+
+.about-sub-title {
+  font-size: 18px;
+  line-height: 1.67;
+  letter-spacing: 0.02em;
+  margin-bottom: 20px;
+  color: #555555;
+}
+
+.about-text {
+  font-size: 14px;
+  line-height: 1.86;
+  letter-spacing: 0.02em;
+  margin-bottom: 40px;
+  color: #555555;
+}
+
+.about-btn {
+  font-family: inherit;
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 1.33;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+  color: #303030;
+}
+
+.about-btn:hover,
+.about-btn:focus {
+  color: var(--accent-color);
+}
+
+/* ----------------------PRICES */
+.prices-section {
+  background-color: gray;
+  padding-top: 130px;
+  padding-bottom: 130px;
+}
+
+.prices-pre-title {
+  font-weight: 600;
+  font-size: 11px;
+  line-height: calc(15 / 11);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: rgba(157, 164, 189, 0.6);
+  padding-bottom: 20px;
+}
+
+.prices-title {
+  font-family: "Raleway", sans-serif;
+  font-weight: bold;
+  font-size: 42px;
+  line-height: calc(49 / 42);
+  letter-spacing: 0.05em;
+  color: var(--first-title-color);
+  padding-bottom: 44px;
+}
+
+.prices-text {
+  font-size: 18px;
+  line-height: 1.67;
+  letter-spacing: 0.02em;
+  color: #9da4bd;
+}
+
+.prices-btn {
+  font-family: inherit;
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 1.33;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+  color: #ffffff;
+}
+
+.prices-btn:hover,
+.prices-btn:focus {
+  color: var(--accent-color);
+}
+
+/* ----------------------REASONS */
+
+.reasons-section {
+  padding-top: 121px;
+  padding-bottom: 130px;
+}
+
+.reasons-numbers {
+  font-weight: 700;
+  font-size: 42px;
+  line-height: calc(57 / 42);
+  text-align: center;
+  letter-spacing: 0.05em;
+  color: #303030;
+}
+
+.reasons-item-text {
+  font-weight: 600;
+  font-size: 11px;
+  line-height: calc(15 / 11);
+  text-align: center;
+  color: #303030;
+}
+
+.reasons-pre-title {
+  font-weight: 600;
+  font-size: 11px;
+  line-height: calc(15 / 11);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #303030;
+  margin-bottom: 20px;
+}
+
+.reasons-title {
+  font-family: "Raleway", sans-serif;
+  font-weight: bold;
+  font-size: 42px;
+  line-height: calc(49 / 42);
+  letter-spacing: 0.05em;
+  color: #303030;
+  margin-bottom: 20px;
+}
+
+.reasons-sub-title {
+  font-size: 18px;
+  line-height: 1.67;
+  letter-spacing: 0.02em;
+  color: #555555;
+}
+
+/* ----------------------MASTERS */
+
+.masters {
+  padding-top: 130px;
+  padding-bottom: 130px;
+}
+
+.masters-pre-title {
+  font-weight: 600;
+  font-size: 11px;
+  line-height: 1.36;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #303030;
+}
+
+.masters-title {
+  font-family: "Raleway", sans-serif;
+  font-weight: bold;
+  font-size: 42px;
+  line-height: calc(49 / 42);
+  letter-spacing: 0.05em;
+  color: #303030;
+}
+
+.masters-item-content {
+  padding-top: 30px;
+}
+
+.masters-item-title {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: calc(25 / 18);
+  text-align: center;
+  letter-spacing: 0.02em;
+  color: #303030;
+  margin-bottom: 8px;
+}
+
+.masters-item-text {
+  font-size: 14px;
+  line-height: calc(19 / 14);
+  text-align: center;
+  letter-spacing: 0.02em;
+  color: #ff6c00;
+}
+
+/* ----------------------GALLERY */
+
+.gallery {
+  padding-top: 130px;
+  padding-bottom: 130px;
+}
+
+.gallery-pre-title {
+  font-weight: 600;
+  font-size: 11px;
+  line-height: 1.36;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #303030;
+  margin-bottom: 44px;
 }
 
 .list {
