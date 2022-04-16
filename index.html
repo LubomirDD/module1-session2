@@ -21,15 +21,15 @@
                 <nav class="navigation">
                     <a href="" class="logo"><img src="./images/logo.svg" alt="лого сайта"></a>
                         <ul class="header-list list">
-                            <li class="header-item"><a href="" class="header-link">О нас</a></li>
-                            <li class="header-item"><a href="#prices" class="header-link">Услуги и цены</a></li>
+                            <li class="header-item"><a href="#about" class="header-link ">О нас</a></li>
+                            <li class="header-item"><a href="#prices" class="current header-link">Услуги и цены</a></li>
                             <li class="header-item"><a href="#masters" class="header-link">Мастера</a></li>
-                            <li class="header-item"><a href="" class="header-link">Контакты</a></li>
+                            <li class="header-item"><a href="#contacts" class="header-link">Контакты</a></li>
                         </ul>
                 </nav> 
                 <div class="header-contacts">
                     <a href="tel:+380441111111" class="header-link-tel">+38 044 111 11 11</a>
-                    <button type="button" class="header-btn">онлайн-запись</button>
+                    <button type="button" class="header-btn btn" data-modal-open>онлайн-запись</button>
                 </div>
             </div>
         </header>
@@ -37,11 +37,12 @@
             <!-- Первая страничка/HERO ------------------------------>
             <section class="hero">
                 <div class="container hero-container">
-                    <ul class="hero-list list">
-                        
-                        <li class="hero-item"><a href="" class="hero-link">Instagram</a></li>
-                        <li class="hero-item"><a href="" class="hero-link">Youtube</a></li>
-                    </ul>
+                    <div class="hero-left">
+                        <ul class="hero-list list">                      
+                            <li class="hero-item"><a href="" class="hero-link">Instagram</a></li>
+                            <li class="hero-item"><a href="" class="hero-link">Youtube</a></li>
+                        </ul>
+                    </div>
                     <div class="hero-right">
                         <p lang="en" class="hero-pre-title pre-title pre-title-light-theme">A hair salon for men in Kyiv</p>
                         <h1 lang="en" class="hero-title">BarberShop</h1>
@@ -53,42 +54,44 @@
                 </div>
             </section>
             <!-- О нас/ABOUT ----------------------------------------->
-            <section class="about">
-                <div class="container">
-                    <ul class="about-list list">
-                        <li class="about-item">
-                            <img 
-                            src="./images/about-img-1.jpg" 
-                            alt="барбер бреет шею клиенту" 
-                            width="270" 
-                            height="445"
-                            class="about-img"
-                        />
-                        </li>
-                        <li class="about-item">
-                            <img 
-                            src="./images/about-img-2.jpg" 
-                            alt="барбер делает кантик"
-                            width="270"
-                            height="445"
-                            class="about-img"
-                        />
-                        </li>
-                    </ul>
-                <p class="about-pre-title pre-title pre-title-dark-theme">О нас</p>
-                <h2 class="about-title">Лучший Барбершоп твоего города</h2>
-                <p class="about-sub-title">
-                    Если ты хочешь добавить в свой образ 
-                    больше уверенности – тебе точно к нам.
-                </p>
-                <p class="about-text">
-                    Мы команда, которая никогда не останавливается на достигнутом
-                    и жаждет перемен. И когда ты попадешь в руки нашего мастера,
-                    то уже никогда не сможешь быть прежним. Мы команда, 
-                    которая всегда с клиентами "на одной волне". Поэтому, мы всегда
-                    готовы усовершенствовать каждого, кто к нам приходит!
-                </p>
-                <button type="button" class="about-btn">онлайн-запись</button>
+            <section id="about" class="about">
+                <div class="container about-container">
+                        <ul class="about-list list">
+                            <li class="about-item">
+                                <img 
+                                src="./images/about-img-1.jpg" 
+                                alt="барбер бреет шею клиенту" 
+                                width="270" 
+                                height="445"
+                                class="about-img"
+                            />
+                            </li>
+                            <li class="about-item">
+                                <img 
+                                src="./images/about-img-2.jpg" 
+                                alt="барбер делает кантик"
+                                width="270"
+                                height="445"
+                                class="about-img"
+                            />
+                            </li>
+                        </ul>
+                        <div class="about-wrap">
+                                <p class="about-pre-title pre-title pre-title-dark-theme">О нас</p>
+                                <h2 class="about-title">Лучший Барбершоп твоего города</h2>
+                                <p class="about-sub-title">
+                                    Если ты хочешь добавить в свой образ 
+                                    больше уверенности – тебе точно к нам.
+                                </p>
+                                <p class="about-text">
+                                    Мы команда, которая никогда не останавливается на достигнутом
+                                    и жаждет перемен. И когда ты попадешь в руки нашего мастера,
+                                    то уже никогда не сможешь быть прежним. Мы команда, 
+                                    которая всегда с клиентами "на одной волне". Поэтому, мы всегда
+                                    готовы усовершенствовать каждого, кто к нам приходит!
+                                </p>
+                                <button type="button" class="about-btn btn">онлайн-запись</button>
+                        </div>
                 </div>
             </section>
             <!-- Цены/PRICES ------------------------------------>
@@ -96,7 +99,8 @@
                 <div class="container">
                     <p class="prices-pre-title pre-title pre-title-light-theme">Проведи время в компании лучших мастеров</p>
                     <h2 class="prices-title">Услуги и цены</h2>
-                    <ul class="prices-list list">
+                    <div class="prices-wrap">
+                        <ul class="prices-list list">
                         <li class="prices-item"> 
                             <p class="prices-text">Мужская стрижка</p>
                             <p class="prices-text">от 300 грн.</p>
@@ -113,8 +117,8 @@
                             <p class="prices-text">Бритье опасной бритвой</p>
                             <p class="prices-text">от 200 грн.</p>
                         </li>
-                    </ul>
-                    <ul class="prices-list list">
+                        </ul>
+                        <ul class="prices-list list">
                         <li class="prices-item">
                             <p class="prices-text">Cтрижка у стажера</p>
                             <p class="prices-text">от 50 грн.</p>
@@ -131,34 +135,39 @@
                             <p class="prices-text">Камуфлирование седины</p>
                             <p class="prices-text">от 200 грн.</p>
                         </li>
-                    </ul>
-                    <button type="button" class="prices-btn">онлайн-запись</button>
+                        </ul>
+                    </div>
+                    <button type="button" class="prices-btn btn">онлайн-запись</button>                   
                 </div>
             </section>
             <!-- Заслуги и отзывы/REASONS ------------------------------>
-            <section class="reasons section">
-                <div class="container">
-                    <ul class="reasons-list list">
-                        <li class="reasons-item">
-                            <span class="reasons-numbers">600</span>
-                            <p class="reasons-item-text">Довольных клиентов в день</p>
-                        </li>
-                        <li class="reasons-item">
-                            <span class="reasons-numbers">50</span>
-                            <p class="reasons-item-text">Наград за отличный сервис</p>
-                        </li>
-                        <li class="reasons-item">
-                            <span class="reasons-numbers">20</span>
-                            <p class="reasons-item-text">Лучших мастеров Киева</p>
-                        </li>
-                        <li class="reasons-item">
-                            <span class="reasons-numbers">100</span>
-                            <p class="reasons-item-text">Подарков постоянным клиентам</p>
-                        </li>
-                    </ul>
-                    <p class="reasons-pre-title pre-title pre-title-dark-theme">старая традиционная школа</p>
-                    <h2 class="reasons-title">Почему приходят именно к нам?</h2>
-                    <p class="reasons-sub-title">О нас говорят только хорошее. Но лучше 1 раз увидеть и прочувствовать, чем 10 раз прочитать.</p>
+            <section class="reasons-section">
+                <div class="container reasons-container">
+                    <div class="reasons-left">
+                        <ul class="reasons-list list">
+                            <li class="reasons-item">
+                                <span class="reasons-numbers">600</span>
+                                <p class="reasons-item-text">Довольных клиентов в день</p>
+                            </li>
+                            <li class="reasons-item">
+                                <span class="reasons-numbers">50</span>
+                                <p class="reasons-item-text">Наград за отличный сервис</p>
+                            </li>
+                            <li class="reasons-item">
+                                <span class="reasons-numbers">20</span>
+                                <p class="reasons-item-text">Лучших мастеров Киева</p>
+                            </li>
+                            <li class="reasons-item reasons-item-dif">
+                                <span class="reasons-numbers">100</span>
+                                <p class="reasons-item-text">Подарков постоянным клиентам</p>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="reasons-right">
+                        <p class="reasons-pre-title pre-title pre-title-dark-theme">старая традиционная школа</p>
+                        <h2 class="reasons-title">Почему приходят именно к нам?</h2>
+                        <p class="reasons-sub-title">О нас говорят только хорошее. Но лучше 1 раз увидеть и прочувствовать, чем 10 раз прочитать.</p>
+                    </div>
                 </div>
             </section>
             <!-- Мастера/MASTERS  ------------------------------------>
@@ -168,13 +177,19 @@
                     <h2 class="masters-title">Наши мастера</h2>
                     <ul class="masters-list list">
                         <li class="masters-item">
-                            <img 
-                                src="./images/masters-img-1-min.jpg" 
-                                alt="Барбер стрижет клиента" 
-                                width="370" 
-                                height="346"
-                                class="masters-item-img"
-                            />
+                            <div class="masters-wrap">
+                                <img 
+                                    src="./images/masters-img-1-min.jpg" 
+                                    alt="Барбер стрижет клиента" 
+                                    width="370" 
+                                    height="346"
+                                    class="masters-item-img"
+                                />
+                                <p class="masters-top-text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sapiente consequatur eos illum, 
+                                    perspiciatis est dolores nam nesciunt odio maxime nihil, 
+                                    reiciendis optio, officiis iste quod iusto eum! Blanditiis, unde illo.
+                                </p>
+                            </div>
                             <div class="masters-item-content">
                                 <h3 class="masters-item-title" lang="en">John Smith</h3>
                                 <p class="masters-item-text" lang="en">Extreme Barber</p>
@@ -195,13 +210,19 @@
                             </div>
                         </li>
                         <li class="masters-item">
-                            <img 
-                                src="./images/masters-img-2-min.jpg" 
-                                alt="Барбер стрижет клиента" 
-                                width="370" 
-                                height="346"
-                                class="masters-item-img"
-                            />
+                            <div class="masters-wrap">
+                                <img 
+                                    src="./images/masters-img-2-min.jpg" 
+                                    alt="Барбер стрижет клиента" 
+                                    width="370" 
+                                    height="346"
+                                    class="masters-item-img"
+                                />
+                                <p class="masters-top-text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sapiente consequatur eos illum,
+                                    perspiciatis est dolores nam nesciunt odio maxime nihil,
+                                    reiciendis optio, officiis iste quod iusto eum! Blanditiis, unde illo.
+                                </p>
+                            </div>
                             <div class="masters-item-content">
                                 <h3 class="masters-item-title" lang="en">Michele Doe</h3>
                                 <p class="masters-item-text" lang="en">Extreme Barber</p>
@@ -222,13 +243,16 @@
                             </div>
                         </li>
                         <li class="masters-item">
-                            <img 
-                                src="./images/masters-img-3-min.jpg" 
-                                alt="Барбер стрижет клиента" 
-                                width="370" 
-                                height="346"
-                                class="masters-item-img"
-                            />
+                            <div class="masters-wrap">
+                                <img 
+                                    src="./images/masters-img-3-min.jpg" 
+                                    alt="Барбер стрижет клиента" 
+                                    width="370" 
+                                    height="346"
+                                    class="masters-item-img"
+                                />
+                                <p class="masters-top-text">ТЫ ПЕТУХ ВНАТУРЕ БЛЯ?????????????????</p>
+                            </div>
                             <div class="masters-item-content">
                                 <h3 class="masters-item-title" lang="en">Alan Black</h3>
                                 <p class="masters-item-text" lang="en">Extreme Barber</p>
@@ -296,11 +320,10 @@
                     </ul>
                 </div>
             </section>
-            <!-- Запись на стрижку  -->
+            <!-- CONTACTS/Контакты ------------------------------------>
             <section>
                 <h2>Онлайн-запись</h2>
             </section>
-            <!-- Контакты, место и время работы  -->
             <section>
                 <h2>Контакты</h2>
                 <address>
@@ -323,14 +346,107 @@
                 <p>Ежедневно с 9:00 до 22:00</p>
             </section>
         </main>
-        <!-- Футер -->
-        <footer>
+        <!-- FOOTER/Футер ----------------------------------->
+        <footer id="contacts" class="footer">
             <p>&copy; Copyright 2020</p>
             <ul class="list">
                 <li><a href="" class="a">Instagram</a></li>
                 <li><a href="" class="a">Youtube</a></li>
             </ul>
         </footer>
+
+        <!-- BACKDROP ------------------------------------->
+        <div class="backdrop" data-modal>
+            <div class="modal">
+                <button type="button" class="modal-close-btn" data-modal-close>X</button>
+                <p class="modal-title">Заголовок модального окна</p>
+                <form class="modal-form">
+                    <div class="form-field">
+                        <label for="user-name" class="modal-label">Введите имя*</label>
+                        <input 
+                        type="text" 
+                        name="user-name" 
+                        class="modal-input" 
+                        placeholder="Иван Иванов"
+                        required
+                        id="user-name"
+                        >
+                    </div>
+                    <div class="form-field">
+                        <label for="user-email" class="modal-label">Введите почту*</label>
+                        <input 
+                        type="email" 
+                        name="user-email" 
+                        class="modal-input" 
+                        placeholder="example@gmail.com"
+                        required
+                        id="user-email"
+                        >
+                    </div>
+                    <div class="form-field">
+                        <label for="user-tel" class="modal-label">Введите номер*</label>
+                        <input 
+                        type="tel" 
+                        name="user-tel" 
+                        class="modal-input" 
+                        placeholder="Введите номер"
+                        required
+                        value="+380"
+                        id="user-tel"
+                        >
+                    </div>
+                    <div class="form-field">
+                        <label for="user-text" class="modal-label">Введите комментарий*</label>
+                        <textarea 
+                        name="user-text" 
+                        id="user-text"
+                        class="modal-text" 
+                        placeholder="Ваше мнение важно для нас"
+                        ></textarea>
+                    </div>
+                    <fieldset>
+                        <legend>Size</legend>
+                        <label for="big-size">40sm<label>
+                        <input type="radio" name="size" id="big-size" value="big-size">
+                        <label for="small-size">30sm<label>
+                        <input type="radio" name="size" id="small-size" value="small-size">
+                    </fieldset>
+                    <fieldset>
+                        <legend>Add</legend>
+                        <label for="cheese">Cheese<label>
+                        <input type="checkbox" name="add" id="cheese" value="cheese">
+                        <label for="peperoni">Peperoni<label>
+                        <input type="checkbox" name="add" id="peperoni" value="peperoni">
+                    </fieldset>
+                    <div class="form-field">
+                        <label for="city">City</label>
+                        <select name="pizza-city" id="city" class="modal-input">
+                            <option value="London">London</option>
+                            <option value="Paris">Paris</option>
+                            <option value="Berlin" selected>Berlin</option>
+                        </select>
+                    </div>
+                    <button type="submit">Submit</button>
+                    <button type="reset">Reset</button>
+                </form>
+            </div>
+        </div>
+        <script>
+            (() => {
+                    const refs = {
+                        openModalBtn: document.querySelector("[data-modal-open]"),
+                        closeModalBtn: document.querySelector("[data-modal-close]"),
+                        modal: document.querySelector("[data-modal]"),
+                    };
+
+                    refs.openModalBtn.addEventListener("click", toggleModal);
+                    refs.closeModalBtn.addEventListener("click", toggleModal);
+
+                    function toggleModal() {
+                        refs.modal.classList.toggle("is-hidden");
+                    }
+                })();
+        </script>
 
     </body>
 </html>
