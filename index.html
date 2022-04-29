@@ -13,6 +13,7 @@
                 integrity="sha512-wpPYUAdjBVSE4KJnH1VR1HeZfpl1ub8YT/NKx4PuQ5NmX2tKuGu6U/JRp5y+Y8XG2tV+wKQpNHVUX03MfMFn9Q=="
                 crossorigin="anonymous" referrerpolicy="no-referrer" />
         <link rel="stylesheet" href="./css/styles.css">
+        <!-- <link rel="stylesheet" href="./css/main.css"> -->
     </head>
     <body>
         <!-- Шапка/HEADER -------------------------------------------> 
@@ -320,31 +321,58 @@
                     </ul>
                 </div>
             </section>
-            <!-- CONTACTS/Контакты ------------------------------------>
-            <section>
-                <h2>Онлайн-запись</h2>
-            </section>
-            <section>
-                <h2>Контакты</h2>
-                <address>
-                    <ul class="list">
-                        <li>
-                            <a href="https://goo.gl/maps/LVeQQbYstDASdaHW7" 
-                            target="_blank" rel="noopener noreferrer nofollow"
-                            class="a"
-                            >ул. Васильковская, 7А Киев, 08132</a>
-                        </li>
-                        <li>
-                            <a href="tel:+380441111111" class="a">+38 044 111 11 11</a>
-                        </li>
-                        <li>
-                            <a href="mailto:barbershop@email.com" class="a">barbershop@email.com</a>
-                        </li>
-                    </ul>
-                </address>
-                <p>время работы</p>
-                <p>Ежедневно с 9:00 до 22:00</p>
-            </section>
+            <!-- FORM/Форма ------------------------------------>
+            <div class="contact-wrap">
+                <div class="container">
+                    <section class="online">
+                        <h2 class="online-title">Онлайн-запись</h2>
+                        <form class="online-form">
+                            <div class="online-wrap">
+                                <input 
+                                type="text" 
+                                name="online-name" 
+                                class="online-input online-input-long"
+                                placeholder="Имя*"
+                                >
+                                <input 
+                                type="tel" 
+                                name="online-tel" 
+                                class="online-input"
+                                placeholder="Телефон*"
+                                >
+                            </div>
+                            <textarea 
+                                name="online-text" 
+                                class="online-text" 
+                                placeholder="сообщение"
+                            ></textarea>
+                            <button type="submit" class="online-btn btn">отправить</button>
+                        </form>
+                    </section>
+                    <!-- CONTACTS/Контакты ------------------------------------>
+                    <section>
+                        <h2>Контакты</h2>
+                        <address>
+                            <ul class="list">
+                                <li>
+                                    <a href="https://goo.gl/maps/LVeQQbYstDASdaHW7" 
+                                    target="_blank" rel="noopener noreferrer nofollow"
+                                    class="a"
+                                    >ул. Васильковская, 7А Киев, 08132</a>
+                                </li>
+                                <li>
+                                    <a href="tel:+380441111111" class="a">+38 044 111 11 11</a>
+                                </li>
+                                <li>
+                                    <a href="mailto:barbershop@email.com" class="a">barbershop@email.com</a>
+                                </li>
+                            </ul>
+                        </address>
+                        <p>время работы</p>
+                        <p>Ежедневно с 9:00 до 22:00</p>
+                    </section>
+                </div>
+            </div>
         </main>
         <!-- FOOTER/Футер ----------------------------------->
         <footer id="contacts" class="footer">
@@ -356,32 +384,39 @@
         </footer>
 
         <!-- BACKDROP ------------------------------------->
-        <div class="backdrop" data-modal>
+        <div class="backdrop is-hidden" data-modal>
             <div class="modal">
                 <button type="button" class="modal-close-btn" data-modal-close>X</button>
                 <p class="modal-title">Заголовок модального окна</p>
                 <form class="modal-form">
                     <div class="form-field">
                         <label for="user-name" class="modal-label">Введите имя*</label>
-                        <input 
-                        type="text" 
-                        name="user-name" 
-                        class="modal-input" 
-                        placeholder="Иван Иванов"
-                        required
-                        id="user-name"
-                        >
+                        <div class="modal-input-wrap">
+                            <input 
+                            type="text" 
+                            name="user-name" 
+                            class="modal-input" 
+                            placeholder="Иван Иванов"
+                            required
+                            id="user-name"
+                            >
+                            <svg class="modal-icon" width="18" height="18">
+                                <use href="./images/icons.svg#icon-person-black-18dp-1"></use>
+                            </svg>
+                        </div>
                     </div>
                     <div class="form-field">
                         <label for="user-email" class="modal-label">Введите почту*</label>
-                        <input 
-                        type="email" 
-                        name="user-email" 
-                        class="modal-input" 
-                        placeholder="example@gmail.com"
-                        required
-                        id="user-email"
-                        >
+                        <div class="modal-input-wrap">
+                            <input 
+                            type="email" 
+                            name="user-email" 
+                            class="modal-input" 
+                            placeholder="example@gmail.com"
+                            required
+                            id="user-email"
+                            >
+                        </div>
                     </div>
                     <div class="form-field">
                         <label for="user-tel" class="modal-label">Введите номер*</label>
@@ -404,7 +439,21 @@
                         placeholder="Ваше мнение важно для нас"
                         ></textarea>
                     </div>
-                    <fieldset>
+                    <div class="form-field">
+                        <input 
+                        type="checkbox" 
+                        class="modal-check visually-hidden" 
+                        id="modal-check"
+                        name="modal-check"
+                        >
+                        <label for="modal-check" class="modal-check-text"
+                        ><span>
+                            <svg class="modal-check-icon" width="16" height="15">
+                                <use href="./images/icons.svg#icon-check"></use>
+                            </svg>
+                        </span> Я подписуюсь на эту парашу</label>
+                    </div>
+                    <!-- <fieldset>
                         <legend>Size</legend>
                         <label for="big-size">40sm<label>
                         <input type="radio" name="size" id="big-size" value="big-size">
@@ -425,28 +474,13 @@
                             <option value="Paris">Paris</option>
                             <option value="Berlin" selected>Berlin</option>
                         </select>
-                    </div>
+                    </div> -->
                     <button type="submit">Submit</button>
                     <button type="reset">Reset</button>
                 </form>
             </div>
         </div>
-        <script>
-            (() => {
-                    const refs = {
-                        openModalBtn: document.querySelector("[data-modal-open]"),
-                        closeModalBtn: document.querySelector("[data-modal-close]"),
-                        modal: document.querySelector("[data-modal]"),
-                    };
-
-                    refs.openModalBtn.addEventListener("click", toggleModal);
-                    refs.closeModalBtn.addEventListener("click", toggleModal);
-
-                    function toggleModal() {
-                        refs.modal.classList.toggle("is-hidden");
-                    }
-                })();
-        </script>
+        <script src="./js/modal.js"></script>
 
     </body>
 </html>
