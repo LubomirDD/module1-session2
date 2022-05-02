@@ -1,0 +1,83 @@
+.header {
+  position: absolute;
+  width: 100%;
+  top: 0;
+  left: 0;
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 1.33;
+  letter-spacing: 0.1em;
+  padding-top: 32px;
+  padding-bottom: 32px;
+}
+
+.logo {
+  margin-right: 64px;
+}
+
+.nav-list__item {
+  & + & {
+    margin-left: 40px;
+  }
+}
+
+.header__container {
+  @include align-list;
+}
+
+.nav-list {
+  display: flex;
+}
+
+.navigation {
+  @include align-list;
+}
+
+.nav-list__link {
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 1.33;
+  letter-spacing: 0.1em;
+  color: var(--header-text-color);
+  transition: color 300ms linear;
+  &:hover,
+  &:focus {
+    color: var(--accent-color);
+  }
+}
+
+.current {
+  color: var(--accent-color);
+  position: relative;
+  &::after {
+    content: "";
+    width: 100%;
+    height: 4px;
+    position: absolute;
+    background-color: var(--accent-color);
+    left: 0;
+    bottom: -48px;
+  }
+}
+
+.header-contacts {
+  margin-left: auto;
+}
+
+.header-contacts__tel {
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 1.33;
+  letter-spacing: 0.1em;
+  color: var(--header-text-color);
+}
+
+.header-contacts__btn {
+  color: var(--first-btn-color);
+  margin-left: 60px;
+  &:hover,
+  &:focus {
+    color: var(--first-btn-color);
+    background-color: var(--accent-color);
+  }
+}
